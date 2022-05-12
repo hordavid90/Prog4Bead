@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BikeShop.Logic.Test</name>
+    </assembly>
+    <members>
+        <member name="T:BikeShop.Logic.Test.BikeLogicTest">
+            <summary>
+            This class is for testing the methods of the bike Logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BikeLogicTest.TestGetAllBikes">
+            <summary>
+            This tests the get all bikes method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BikeLogicTest.TestGetBikesById">
+            <summary>
+            This tests the get one bike by id method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BikeLogicTest.TestDeleteBike">
+            <summary>
+            This tests the get one bike by id method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BikeLogicTest.TestBikeAdd">
+            <summary>
+            This tests the AddBike method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BikeLogicTest.TesChangeBikesName">
+            <summary>
+            This tests the ChangeBikesName mathod.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BikeLogicTest.Setup">
+            <summary>
+            This is the setup for the tests.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BikeLogicTest.TestBikesWithTheOldestBrand">
+            <summary>
+            This is a test for the Bike with the oldest brand method.
+            </summary>
+        </member>
+        <member name="T:BikeShop.Logic.Test.BrandLogicTest">
+            <summary>
+            This class is for testing the methods of the Brand Logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BrandLogicTest.TestGetAllBrands">
+            <summary>
+            This tests the get all bikes method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BrandLogicTest.TestGetBrandsById">
+            <summary>
+            This tests the get one bike by id method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BrandLogicTest.TestDeleteBrand">
+            <summary>
+            This tests the get one bike by id method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BrandLogicTest.TestBrandAdd">
+            <summary>
+            This tests the AddBrand method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BrandLogicTest.TestChangeBrandsName">
+            <summary>
+            This tests the ChangeBikesName mathod.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BrandLogicTest.Setup">
+            <summary>
+            This is the setup for the tests.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.BrandLogicTest.TestAveragePriceOfOneBrand">
+            <summary>
+            This is a test for the Bike with the oldest brand method.
+            </summary>
+        </member>
+        <member name="T:BikeShop.Logic.Test.ServiceLogicTest">
+            <summary>
+            This class is for testing the methods of the Service Logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.ServiceLogicTest.Setup">
+            <summary>
+            This is the setup for the tests.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.ServiceLogicTest.TestMostLikedServiceStation">
+            <summary>
+            This is a test for the Bike with the oldest brand method.
+            </summary>
+        </member>
+        <member name="T:BikeShop.Logic.Test.TestOwnerLogic">
+            <summary>
+            This class is for testing the methods of the bike Logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.TestOwnerLogic.TestTakeMoneyFromOwner">
+            <summary>
+            This tests the Take money method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.TestOwnerLogic.TestAddMoneyToOwner">
+            <summary>
+            This tests the Add money method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.TestOwnerLogic.TestDeleteOwner">
+            <summary>
+            This tests the Add money method.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.TestOwnerLogic.Setup">
+            <summary>
+            The setup for the non crud tests.
+            It creates a Db context, an owner repository and an owner logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.Test.TestOwnerLogic.TestGetOwnersFavoriteBrand">
+            <summary>
+            This test the OwnersFavoriteBrand method.
+            </summary>
+        </member>
+    </members>
+</doc>

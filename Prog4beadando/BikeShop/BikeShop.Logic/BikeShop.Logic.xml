@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BikeShop.Logic</name>
+    </assembly>
+    <members>
+        <member name="T:BikeShop.Logic.BikeLogic">
+            <summary>
+            This is the bike logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.#ctor(BikeShop.Repository.IBikeRepository,BikeShop.Repository.IBrandRepository,BikeShop.Repository.IOwnerRepository,BikeShop.Repository.IServiceReporitory,BikeShop.Repository.IFacebookGroupRepository,BikeShop.Repository.IOwnerFacebookGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Logic.BikeLogic"/> class.
+            </summary>
+            <param name="bikeRepo">The IBikeRepository.</param>
+            <param name="brandRepo">The IBrandRepository.</param>
+            <param name="ownerRepo">The IOwnerRepository.</param>
+            <param name="serviceRepo">The IServiceRepository.</param>
+            <param name="facebookGroupRepo">The IFacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.AddBike(BikeShop.Data.Bike,BikeShop.Data.Owner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.ChangePrice(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.DeleteBike(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.GetOne2(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.SellBike(System.Int32,BikeShop.Data.Owner,BikeShop.Data.Owner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.GetAll">
+            <summary>
+            This method returns all the bikes in the Db.
+            </summary>
+            <returns>It return all of the bikes.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.GetAlll">
+            <summary>
+            This method returns all the bikes in the Db.
+            </summary>
+            <returns>It return all of the bikes.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.AverageBikePriceByBrandLogic">
+            <summary>
+            This method return the average price of the brands.
+            </summary>
+            <returns>It return the brands name and the average price.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.AveragePriceByBrandTask">
+            <summary>
+            This method returns the average price of the bikes by their brand.
+            </summary>
+            <returns>Returns a task.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.BikesWithTheOldestBrandLogic">
+            <summary>
+            This returns the bikes with the oldest brand.
+            </summary>
+            <returns>It returns a collection of the bikes with the oldest brand.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.BikesWithTheOldestBrandLogic2">
+            <summary>
+            This returns the bikes with the oldest brand.
+            </summary>
+            <returns>It returns a collection of the bikes with the oldest brand.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.BikeLogic.BikesWithOldestBrandTask">
+            <summary>
+            This method return one or more bikies which brand's established date is the oldest.
+            </summary>
+            <returns>It return a task.</returns>
+        </member>
+        <member name="T:BikeShop.Logic.BrandLogic">
+            <summary>
+            This brand logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.BrandLogic.#ctor(BikeShop.Repository.IBikeRepository,BikeShop.Repository.IBrandRepository,BikeShop.Repository.IOwnerRepository,BikeShop.Repository.IServiceReporitory,BikeShop.Repository.IFacebookGroupRepository,BikeShop.Repository.IOwnerFacebookGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Logic.BrandLogic"/> class.
+            </summary>
+            <param name="bikeRepo">The IBikeRepository.</param>
+            <param name="brandRepo">The IBrandRepository.</param>
+            <param name="ownerRepo">The IOwnerRepository.</param>
+            <param name="serviceRepo">The IServiceRepository.</param>
+            <param name="facebookGroupRepo">The IFacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+        </member>
+        <member name="M:BikeShop.Logic.BrandLogic.AddBrand(BikeShop.Data.Brand)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BrandLogic.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BrandLogic.DeleteBrand(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BrandLogic.GetOne2(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BrandLogic.ListAllBrands">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.BrandLogic.GetAll">
+            <summary>
+            This method returns all the brands in the Db.
+            </summary>
+            <returns>It return all of the brands.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.BrandLogic.AveragePriceByBrandLogic(System.Linq.IQueryable{BikeShop.Data.Bike})">
+            <summary>
+            This method returns the average price by brands.
+            </summary>
+            <param name="allBikes">It contains all of the bikes.</param>
+            <returns>It returns the brand's name and the average price in a collection.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.BrandLogic.AveragePriceOfOneBrand(System.Linq.IQueryable{BikeShop.Data.Bike},System.String)">
+            <summary>
+            This method returns the average price of one specific brand.
+            </summary>
+            <param name="allBikes">It contains all of the bikes.</param>
+            <param name="brandName">The brand's name we want to gets its average price.</param>
+            <returns>It returns the average price.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.BrandLogic.AveragePriceOfOneBrandTask(System.String)">
+            <summary>
+            This method returns the average price of one brand.
+            </summary>
+            <param name="brandName">The name of the brand we want to get the average price for.</param>
+            <returns>It return a task.</returns>
+        </member>
+        <member name="T:BikeShop.Logic.FacebookGroupLogic">
+            <summary>
+            The FacebookGroup logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.FacebookGroupLogic.#ctor(BikeShop.Repository.IBikeRepository,BikeShop.Repository.IBrandRepository,BikeShop.Repository.IOwnerRepository,BikeShop.Repository.IServiceReporitory,BikeShop.Repository.IFacebookGroupRepository,BikeShop.Repository.IOwnerFacebookGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Logic.FacebookGroupLogic"/> class.
+            </summary>
+            <param name="bikeRepo">The IBikeRepository.</param>
+            <param name="brandRepo">The IBrandRepository.</param>
+            <param name="ownerRepo">The IOwnerRepository.</param>
+            <param name="serviceRepo">The IServiceRepository.</param>
+            <param name="facebookGroupRepo">The IFacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+        </member>
+        <member name="M:BikeShop.Logic.FacebookGroupLogic.AddFacebookGroup(BikeShop.Data.FacebookGroup)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.FacebookGroupLogic.AddOwnerToGroup(System.Int32,BikeShop.Data.Owner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.FacebookGroupLogic.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.FacebookGroupLogic.DeleteFacebookGroup(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.FacebookGroupLogic.GetOne2(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.FacebookGroupLogic.ListAllFacebookGroup">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.FacebookGroupLogic.RemoveOwnerFromGroup(System.Int32,BikeShop.Data.Owner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.FacebookGroupLogic.GetAll">
+            <summary>
+            This method returns all the Facebook groups in the Db.
+            </summary>
+            <returns>It return all of the Facebook groups.</returns>
+        </member>
+        <member name="T:BikeShop.Logic.IBikeLogic">
+            <summary>
+            This is the interface for the bike Logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.IBikeLogic.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method changes a bike's modelname.
+            </summary>
+            <param name="id">this id of the bike we are looking for.</param>
+            <param name="newName">The new modelname.</param>
+            <returns> Returns true if the changing was siccessful.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.IBikeLogic.AddBike(BikeShop.Data.Bike,BikeShop.Data.Owner)">
+            <summary>
+            This method adds a new bike to the database.
+            </summary>
+            <param name="bike">The new bike we want to add.</param>
+            <param name="owner">The buyer of the new bike.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IBikeLogic.DeleteBike(System.Int32)">
+            <summary>
+            This method deletes a bike.
+            </summary>
+            <param name="id">The id of the bike that we want to delete.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IBikeLogic.ChangePrice(System.Int32,System.Int32)">
+            <summary>
+            This method changes a bike's price.
+            </summary>
+            <param name="id">The id of the bike we are looking for.</param>
+            <param name="newPrice">The new price if the bike.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IBikeLogic.SellBike(System.Int32,BikeShop.Data.Owner,BikeShop.Data.Owner)">
+            <summary>
+            This method changes a bike's owner.
+            </summary>
+            <param name="bikeId">The id of the bike we want to sell.</param>
+            <param name="newOwner">The buyer.</param>
+            <param name="seller">The seller.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IBikeLogic.GetOne2(System.Int32)">
+            <summary>
+            This method returns a bike.
+            </summary>
+            <param name="id">The id of the bike we are looking for.</param>
+            <returns>It returns a bike.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.IBikeLogic.GetAlll">
+            <summary>
+            This method returns all the bikes in the Db.
+            </summary>
+            <returns>It return all of the bikes.</returns>
+        </member>
+        <member name="T:BikeShop.Logic.IBrandLogic">
+            <summary>
+            This is the BrandLogic interface.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.IBrandLogic.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method changes a brand's name.
+            </summary>
+            <param name="id">Id of the brand we are looking for.</param>
+            <param name="newBrandName">The new name of the brand.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IBrandLogic.AddBrand(BikeShop.Data.Brand)">
+            <summary>
+            This method adds a new brand.
+            </summary>
+            <param name="newBrand">The new brand.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IBrandLogic.DeleteBrand(System.Int32)">
+            <summary>
+            This method deletes a brand.
+            </summary>
+            <param name="id">The id of the brand we want to delete.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IBrandLogic.ListAllBrands">
+            <summary>
+            This method lists all brands in the db.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.IBrandLogic.GetOne2(System.Int32)">
+            <summary>
+            This method returns a brand.
+            </summary>
+            <param name="id">The id of the brand we are looking for.</param>
+            <returns>A brand.</returns>
+        </member>
+        <member name="T:BikeShop.Logic.IFacebookGroupLogic">
+            <summary>
+            This is the interface for the Facebook group logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.IFacebookGroupLogic.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method changes a Facebook group's name.
+            </summary>
+            <param name="id">Id of the Facebook group we are looking for.</param>
+            <param name="newGroupName">The new name of the Facebook group.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IFacebookGroupLogic.AddFacebookGroup(BikeShop.Data.FacebookGroup)">
+            <summary>
+            This method adds a new Facebook group.
+            </summary>
+            <param name="newGroup">The new Facebook group.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IFacebookGroupLogic.DeleteFacebookGroup(System.Int32)">
+            <summary>
+            This method deletes a Facebook group.
+            </summary>
+            <param name="id">The id of the Facebook group we want to delete.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IFacebookGroupLogic.ListAllFacebookGroup">
+            <summary>
+            This method lists all Facebook group in the db.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.IFacebookGroupLogic.GetOne2(System.Int32)">
+            <summary>
+            This method returns a Facebook group.
+            </summary>
+            <param name="id">The id of the Facebook group we are looking for.</param>
+            <returns>A Facebook group.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.IFacebookGroupLogic.AddOwnerToGroup(System.Int32,BikeShop.Data.Owner)">
+            <summary>
+            This method adds an owner to the group.
+            </summary>
+            <param name="groupid">The id of the group where we want to add a new owner.</param>
+            <param name="owner">The ower we want to add.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IFacebookGroupLogic.RemoveOwnerFromGroup(System.Int32,BikeShop.Data.Owner)">
+            <summary>
+            This method adds an owner to the group.
+            </summary>
+            <param name="groupid">The id of the group where we want to add a new owner.</param>
+            <param name="owner">The ower we want to add.</param>
+        </member>
+        <member name="T:BikeShop.Logic.IOwnerLogic">
+            <summary>
+            This is the interface for the owner logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.IOwnerLogic.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method changes an owner's name.
+            </summary>
+            <param name="id">The id of the owner we are modifying.</param>
+            <param name="newName">The new name.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IOwnerLogic.AddMoney(System.Int32,System.Int32)">
+            <summary>
+            This method adds money to an owner.
+            </summary>
+            <param name="id">The id of the owner we are adding money to.</param>
+            <param name="amount">The amount of money we are adding.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IOwnerLogic.TakeMoney(System.Int32,System.Int32)">
+            <summary>
+            This method takes money from an owner.
+            </summary>
+            <param name="id">The id of the owner we are taking money from.</param>
+            <param name="amount">The amount of money we are taking.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IOwnerLogic.GetOne2(System.Int32)">
+            <summary>
+            This method returns an owner.
+            </summary>
+            <param name="id">The id of the owner we are looking for.</param>
+            <returns>It returns an owner.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.IOwnerLogic.AddOwner(BikeShop.Data.Owner)">
+            <summary>
+            This method adds a new owner.
+            </summary>
+            <param name="newOwner">The new owner.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IOwnerLogic.DeleteOwner(System.Int32)">
+            <summary>
+            This method deletes an owner.
+            </summary>
+            <param name="id">The id of the owner we want to delete.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IOwnerLogic.ListAll">
+            <summary>
+            This method lists all the owners.
+            </summary>
+        </member>
+        <member name="T:BikeShop.Logic.IServiceLogic">
+            <summary>
+            This is the interface for the Service logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.IServiceLogic.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method changes a servicestation's name.
+            </summary>
+            <param name="id">Id of the servicestation we are looking for.</param>
+            <param name="newName">The new name of the servicestation.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IServiceLogic.AddServicestation(BikeShop.Data.Service)">
+            <summary>
+            This method adds a new servicestation.
+            </summary>
+            <param name="newServicestation">The new servicestation.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IServiceLogic.DeleteServicestation(System.Int32)">
+            <summary>
+            This method deletes a Servicestation.
+            </summary>
+            <param name="id">The id of the Servicestation we want to delete.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IServiceLogic.ListAllServicestations">
+            <summary>
+            This method lists all Servicestations in the db.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.IServiceLogic.GetOne2(System.Int32)">
+            <summary>
+            This method returns a Servicestation.
+            </summary>
+            <param name="id">The id of the Servicestation we are looking for.</param>
+            <returns>A Servicestation.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.IServiceLogic.ChangeCapacity(System.Int32,System.Int32)">
+            <summary>
+            This method increases the capacity of a Servicestation.
+            </summary>
+            <param name="id">The id of the Servicestation we are looking for.</param>
+            <param name="amount">The amount of new free spaces.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IServiceLogic.HireNewWorker(System.Int32)">
+            <summary>
+            This method adds a new worker to a serviceStation.
+            </summary>
+            <param name="id">The id of the Servicestation we are looking for.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IServiceLogic.FireWorker(System.Int32)">
+            <summary>
+            This method decreases the number of workers in a serviceStation by one.
+            </summary>
+            <param name="id">The id of the Servicestation we are looking for.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IServiceLogic.AddBikeToServicestation(System.Int32,BikeShop.Data.Bike)">
+            <summary>
+            This method adds a bike to a serviceStation.
+            </summary>
+            <param name="serviceId">The id of the Servicestation we are looking for.</param>
+            <param name="bike">The bike we want to add.</param>
+        </member>
+        <member name="M:BikeShop.Logic.IServiceLogic.DeleteBikeFromServicestation(System.Int32,BikeShop.Data.Bike)">
+            <summary>
+            This method deletes a bike from a serviceStation.
+            </summary>
+            <param name="serviceId">The id of the Servicestation we are looking for.</param>
+            <param name="bike">The bike we want to delete.</param>
+        </member>
+        <member name="T:BikeShop.Logic.OwnerFacebookGroupLogic">
+            <summary>
+            This is the OwnerFacebookGroupLogic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerFacebookGroupLogic.#ctor(BikeShop.Repository.IBikeRepository,BikeShop.Repository.IBrandRepository,BikeShop.Repository.IOwnerRepository,BikeShop.Repository.IServiceReporitory,BikeShop.Repository.IFacebookGroupRepository,BikeShop.Repository.IOwnerFacebookGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Logic.OwnerFacebookGroupLogic"/> class.
+            </summary>
+            <param name="bikeRepo">The IBikeRepository.</param>
+            <param name="brandRepo">The IBrandRepository.</param>
+            <param name="ownerRepo">The IOwnerRepository.</param>
+            <param name="serviceRepo">The IServiceRepository.</param>
+            <param name="facebookGroupRepo">The IFacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerFacebookGroupLogic.AddOwnerFacebookGroup(BikeShop.Data.OwnerFBGroup)">
+            <summary>
+            This method adds a new OwnerFacebookGroup.
+            </summary>
+            <param name="newFBGroup">The new OwnerFacebookGroup.</param>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerFacebookGroupLogic.DeleteOwner(System.Int32,System.Int32)">
+            <summary>
+            This method deletes an owner from a Facebook group.
+            </summary>
+            <param name="groupid">The id of the group.</param>
+            <param name="ownerid">The id of the owner we want to delete.</param>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerFacebookGroupLogic.GetOne2(System.Int32)">
+            <summary>
+            This method returns one ownerfacebookgroup entity.
+            </summary>
+            <param name="id">The id of the ownerfacebookgroup.</param>
+            <returns>It returns one ownerfacebookgroup entity.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerFacebookGroupLogic.GetAll">
+            <summary>
+            This method returns all of the ownerfacebookgroup entity.
+            </summary>
+            <returns>It returns all of the ownerfacebookgroup entity.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerFacebookGroupLogic.BikesByFbGroup(System.Int32)">
+            <summary>
+            This method returns the bikes in a facebook group.
+            </summary>
+            <param name="id">The id of the Facebook group.</param>
+            <returns>It returns the group's name, the brand id, the brand name, the mike's model name and the owner.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerFacebookGroupLogic.BikesByFBGroupTask(System.Int32)">
+            <summary>
+            This method returns the bikes in a facebook group.
+            </summary>
+            <param name="id">The id of the Facebook group.</param>
+            <returns>It returns a task.</returns>
+        </member>
+        <member name="T:BikeShop.Logic.OwnerLogic">
+            <summary>
+            This is the OwnerLogic class.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerLogic.#ctor(BikeShop.Repository.IBikeRepository,BikeShop.Repository.IBrandRepository,BikeShop.Repository.IOwnerRepository,BikeShop.Repository.IServiceReporitory,BikeShop.Repository.IFacebookGroupRepository,BikeShop.Repository.IOwnerFacebookGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Logic.OwnerLogic"/> class.
+            </summary>
+            <param name="bikeRepo">The IBikeRepository.</param>
+            <param name="brandRepo">The IBrandRepository.</param>
+            <param name="ownerRepo">The IOwnerRepository.</param>
+            <param name="serviceRepo">The IServiceRepository.</param>
+            <param name="facebookGroupRepo">The IFacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerLogic.AddMoney(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerLogic.AddOwner(BikeShop.Data.Owner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerLogic.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerLogic.DeleteOwner(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerLogic.GetOne2(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerLogic.ListAll">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerLogic.TakeMoney(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerLogic.GetAll">
+            <summary>
+            This method returns all the owners in the Db.
+            </summary>
+            <returns>It return all of the owners.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.OwnerLogic.OwnersFavoriteBrandLogic(System.Int32)">
+            <summary>
+            This return the favorite brand of an owner if he has any.
+            </summary>
+            <param name="id">The id of the owner.</param>
+            <returns>The favorite brands name.</returns>
+        </member>
+        <member name="T:BikeShop.Logic.ServiceLogic">
+            <summary>
+            This is the service logic.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.#ctor(BikeShop.Repository.IBikeRepository,BikeShop.Repository.IBrandRepository,BikeShop.Repository.IOwnerRepository,BikeShop.Repository.IServiceReporitory,BikeShop.Repository.IFacebookGroupRepository,BikeShop.Repository.IOwnerFacebookGroupRepository)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Logic.ServiceLogic"/> class.
+            </summary>
+            <param name="bikeRepo">The IBikeRepository.</param>
+            <param name="brandRepo">The IBrandRepository.</param>
+            <param name="ownerRepo">The IOwnerRepository.</param>
+            <param name="serviceRepo">The IServiceRepository.</param>
+            <param name="facebookGroupRepo">The IFacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.AddBikeToServicestation(System.Int32,BikeShop.Data.Bike)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.AddServicestation(BikeShop.Data.Service)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.DeleteBikeFromServicestation(System.Int32,BikeShop.Data.Bike)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.DeleteServicestation(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.FireWorker(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.GetOne2(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.HireNewWorker(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.ChangeCapacity(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.ListAllServicestations">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.GetAll">
+            <summary>
+            This method returns all the service stations in the Db.
+            </summary>
+            <returns>It return all of the service stations.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.MostLikedServiceStation">
+            <summary>
+            This method return the most liked servicestation or stations.
+            </summary>
+            <returns>It return one or more service stations id, name and the number of the bikes in the servicestation.</returns>
+        </member>
+        <member name="M:BikeShop.Logic.ServiceLogic.MostLikedServiceStationTask">
+            <summary>
+            This method returns the most liked service station(s).
+            </summary>
+            <returns>It returns a task.</returns>
+        </member>
+    </members>
+</doc>

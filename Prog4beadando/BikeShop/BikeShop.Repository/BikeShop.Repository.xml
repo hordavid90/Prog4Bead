@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BikeShop.Repository</name>
+    </assembly>
+    <members>
+        <member name="T:BikeShop.Repository.BikeRepository">
+            <summary>
+            This is the bike repository.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.BikeRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Repository.BikeRepository"/> class.
+            </summary>
+            <param name="ctx">It is the database context.</param>
+        </member>
+        <member name="M:BikeShop.Repository.BikeRepository.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.BikeRepository.ChangePrice(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.BikeRepository.Delete(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.BikeRepository.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.BikeRepository.SellBike(System.Int32,BikeShop.Data.Owner,BikeShop.Data.Owner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.BikeRepository.AddBike(BikeShop.Data.Bike,BikeShop.Data.Owner)">
+            <inheritdoc/>
+        </member>
+        <member name="T:BikeShop.Repository.BrandRepository">
+            <summary>
+            The BrandRepository.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.BrandRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Repository.BrandRepository"/> class.
+            </summary>
+            <param name="ctx">It is the database context.</param>
+        </member>
+        <member name="M:BikeShop.Repository.BrandRepository.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.BrandRepository.Delete(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.BrandRepository.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:BikeShop.Repository.FacebookGroupRepository">
+            <summary>
+            This is the FacebookGroup repository.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.FacebookGroupRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Repository.FacebookGroupRepository"/> class.
+            </summary>
+            <param name="ctx">It is the database context.</param>
+        </member>
+        <member name="M:BikeShop.Repository.FacebookGroupRepository.AddOwnerToGroup(System.Int32,BikeShop.Data.Owner)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.FacebookGroupRepository.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.FacebookGroupRepository.Delete(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.FacebookGroupRepository.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.FacebookGroupRepository.RemoveOwnerFromGroup(System.Int32,BikeShop.Data.Owner)">
+            <inheritdoc/>
+        </member>
+        <member name="T:BikeShop.Repository.IBikeRepository">
+            <summary>
+            This is the interface for the BikeRepository.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.IBikeRepository.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method changes a bike's model name.
+            </summary>
+            <param name="id">The id of the bike we want to change its name.</param>
+            <param name="newName">The new model name.</param>
+            <returns> Returns true if the changing was siccessful.</returns>
+        </member>
+        <member name="M:BikeShop.Repository.IBikeRepository.ChangePrice(System.Int32,System.Int32)">
+            <summary>
+            This method changes a bike's price.
+            </summary>
+            <param name="id">The id of the bike we want to change its price.</param>
+            <param name="newPrice">The new price.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IBikeRepository.SellBike(System.Int32,BikeShop.Data.Owner,BikeShop.Data.Owner)">
+            <summary>
+            This method changes a bike's owner.
+            </summary>
+            <param name="bikeId">The id of the bike.</param>
+            <param name="newOwner">The buyer.</param>
+            <param name="seller">The seller.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IBikeRepository.AddBike(BikeShop.Data.Bike,BikeShop.Data.Owner)">
+            <summary>
+            This method adds a new bike to the Db.
+            </summary>
+            <param name="bike">The new bike.</param>
+            <param name="owner">The owner of the new bike.</param>
+        </member>
+        <member name="T:BikeShop.Repository.IBrandRepository">
+            <summary>
+            The BrandRepository interface.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.IBrandRepository.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method changes a brand's name.
+            </summary>
+            <param name="id">The id of the brand we are looking for.</param>
+            <param name="newBrandName">The new name of the brand.</param>
+        </member>
+        <member name="T:BikeShop.Repository.IFacebookGroupRepository">
+            <summary>
+            This is the interface for the FacebookGroupRepository.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.IFacebookGroupRepository.AddOwnerToGroup(System.Int32,BikeShop.Data.Owner)">
+            <summary>
+            This method adds an owner to the group.
+            </summary>
+            <param name="groupid">The id of the group where we want to add a new owner.</param>
+            <param name="owner">The ower we want to add.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IFacebookGroupRepository.RemoveOwnerFromGroup(System.Int32,BikeShop.Data.Owner)">
+            <summary>
+            This method adds an owner to the group.
+            </summary>
+            <param name="groupid">The id of the group where we want to add a new owner.</param>
+            <param name="owner">The ower we want to add.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IFacebookGroupRepository.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method changes a Facebook groups name.
+            </summary>
+            <param name="id">The if of the group we want to modify.</param>
+            <param name="newName">The new name of the group.</param>
+        </member>
+        <member name="T:BikeShop.Repository.IOwnerFacebookGroupRepository">
+            <summary>
+            The OwnerFacebookGroupRepository interface.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.IOwnerFacebookGroupRepository.Delete2(System.Int32,System.Int32)">
+            <summary>
+            This method deletes an owner from a FB group.
+            </summary>
+            <param name="groupId">The group id we want to delete from.</param>
+            <param name="ownerId">The id of the owner we want to delete from the FB group.</param>
+        </member>
+        <member name="T:BikeShop.Repository.IOwnerRepository">
+            <summary>
+            This is the interface for the owner repository.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.IOwnerRepository.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method deletes an owner.
+            </summary>
+            <param name="id">The id of the owner we are looking for.</param>
+            <param name="newName">The new name of the owner.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IOwnerRepository.AddMoney(System.Int32,System.Int32)">
+            <summary>
+            This method adds money to an owner.
+            </summary>
+            <param name="id">The if of the owner who we want to add money to.</param>
+            <param name="amount">The amount of money we want to add.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IOwnerRepository.TakeMoney(System.Int32,System.Int32)">
+            <summary>
+            This method takes money from an owner.
+            </summary>
+            <param name="id">The if of the owner who we want to take money from.</param>
+            <param name="amount">The amount of money we want to take.</param>
+        </member>
+        <member name="T:BikeShop.Repository.IRepository`1">
+            <summary>
+            This is the MyRepository interface.
+            </summary>
+            <typeparam name="T">T could be a Bike, Brand, Owner, Servicestation.</typeparam>
+        </member>
+        <member name="M:BikeShop.Repository.IRepository`1.GetAll">
+            <summary>
+            This method gives back all T type items.
+            </summary>
+            <returns>It returns all of the Owner, Bike, or Brand type items.</returns>
+        </member>
+        <member name="M:BikeShop.Repository.IRepository`1.GetOne(System.Int32)">
+            <summary>
+            This method gives back one bike specified by id.
+            </summary>
+            <param name="id"> This is the id of the bike we are looking for. </param>
+            <returns> It returns a Bike. </returns>
+        </member>
+        <member name="M:BikeShop.Repository.IRepository`1.Add(`0)">
+            <summary>
+            This method inserts a new Item to the Db. It can be a Bike, a Brank and an Owner.
+            </summary>
+            <param name="newItem">It is either a Bike, a Brand or an Owner. </param>
+        </member>
+        <member name="M:BikeShop.Repository.IRepository`1.Delete(System.Int32)">
+            <summary>
+            This method deletes an item by it's id.
+            </summary>
+            <param name="id">It is the id of the item that we want to delete. </param>
+        </member>
+        <member name="T:BikeShop.Repository.IServiceReporitory">
+            <summary>
+            This is the interface for the service repository.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.IServiceReporitory.ChangeName(System.Int32,System.String)">
+            <summary>
+            This method changes a service's name.
+            </summary>
+            <param name="id">The id of the service we want to modify.</param>
+            <param name="newName">The new name of the service.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IServiceReporitory.ChangeCapacity(System.Int32,System.Int32)">
+            <summary>
+            This method changes a service's capacity.
+            </summary>
+            <param name="id">The id of the service we want to modify.</param>
+            <param name="newCapacity">The new capacity of the service.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IServiceReporitory.HireNewEmployee(System.Int32)">
+            <summary>
+            This method adds a new worker to a service station.
+            </summary>
+            <param name="id">The id of the service station.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IServiceReporitory.FireEmployee(System.Int32)">
+            <summary>
+            This method takes one worker away from a service station.
+            </summary>
+            <param name="id">The id of the service station.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IServiceReporitory.AddBikeToService(System.Int32,BikeShop.Data.Bike)">
+            <summary>
+            This method adds a bike to a serviceStation.
+            </summary>
+            <param name="serviceId">The id of the Servicestation we are looking for.</param>
+            <param name="bike">The bike we want to add.</param>
+        </member>
+        <member name="M:BikeShop.Repository.IServiceReporitory.DeleteBikeFromService(System.Int32,BikeShop.Data.Bike)">
+            <summary>
+            This method deletes a bike from a serviceStation.
+            </summary>
+            <param name="serviceId">The id of the Servicestation we are looking for.</param>
+            <param name="bike">The bike we want to delete.</param>
+        </member>
+        <member name="T:BikeShop.Repository.MyRepository`1">
+            <summary>
+            This is the MyRepository.
+            </summary>
+            <typeparam name="T">T could be a Bike, Brand, Owner, Servicestation.</typeparam>
+        </member>
+        <member name="F:BikeShop.Repository.MyRepository`1.ctx">
+            <summary>
+            This is the DbContext.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.MyRepository`1.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Repository.MyRepository`1"/> class.
+            </summary>
+            <param name="ctx">It is the database context.</param>
+        </member>
+        <member name="M:BikeShop.Repository.MyRepository`1.Add(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.MyRepository`1.Delete(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.MyRepository`1.GetAll">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.MyRepository`1.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:BikeShop.Repository.OwnerFacebookGroupRepository">
+            <summary>
+            asd.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerFacebookGroupRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Repository.OwnerFacebookGroupRepository"/> class.
+            </summary>
+            <param name="ctx">It is the database context.</param>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerFacebookGroupRepository.Delete(System.Int32)">
+            <summary>
+            This method deletes an OwnerFBGroup item.
+            </summary>
+            <param name="id">The id of the item we want to delete.</param>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerFacebookGroupRepository.Delete2(System.Int32,System.Int32)">
+            <summary>
+            This method deletes an owner from a FB group.
+            </summary>
+            <param name="groupId">The group id we want to delete from.</param>
+            <param name="ownerId">The id of the owner we want to delete from the FB group.</param>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerFacebookGroupRepository.GetOne(System.Int32)">
+            <summary>
+            This gets one OwnerFBGroup item.
+            </summary>
+            <param name="id">The id of the item we want to get.</param>
+            <returns>It returns an OwnerFBGroup.</returns>
+        </member>
+        <member name="T:BikeShop.Repository.OwnerHasNotEnoughMoneyException">
+            <summary>
+            This exception is thrown when we want to take more money from an owner than he has.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerHasNotEnoughMoneyException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Repository.OwnerHasNotEnoughMoneyException"/> class.
+            </summary>
+            <param name="message">The message of the exception.</param>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerHasNotEnoughMoneyException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Repository.OwnerHasNotEnoughMoneyException"/> class.
+            </summary>
+            <param name="message">The message of the exception.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerHasNotEnoughMoneyException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Repository.OwnerHasNotEnoughMoneyException"/> class.
+            The constructor of the OwnerHasNotEnoughMoneyException.
+            </summary>
+        </member>
+        <member name="T:BikeShop.Repository.OwnerRepository">
+            <summary>
+            This is the owner repository.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Repository.OwnerRepository"/> class.
+            </summary>
+            <param name="ctx">It is the database context.</param>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerRepository.AddMoney(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerRepository.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerRepository.Delete(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerRepository.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.OwnerRepository.TakeMoney(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="T:BikeShop.Repository.ServiceRepository">
+            <summary>
+            This is the service reporitory.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Repository.ServiceRepository.#ctor(Microsoft.EntityFrameworkCore.DbContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Repository.ServiceRepository"/> class.
+            </summary>
+            <param name="ctx">It is the database context.</param>
+        </member>
+        <member name="M:BikeShop.Repository.ServiceRepository.AddBikeToService(System.Int32,BikeShop.Data.Bike)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.ServiceRepository.ChangeCapacity(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.ServiceRepository.ChangeName(System.Int32,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.ServiceRepository.Delete(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.ServiceRepository.DeleteBikeFromService(System.Int32,BikeShop.Data.Bike)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.ServiceRepository.FireEmployee(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.ServiceRepository.GetOne(System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Repository.ServiceRepository.HireNewEmployee(System.Int32)">
+            <inheritdoc/>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BikeShop.Program</name>
+    </assembly>
+    <members>
+        <member name="T:BikeShop.Program.CreateCtx">
+            <summary>
+            This class has a method that creates a DbContext.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Program.CreateCtx.CreateBikeDbContext">
+            <summary>
+            This method returns a BikeDbContext.
+            </summary>
+            <returns>BikeDbContext.</returns>
+        </member>
+        <member name="T:BikeShop.Program.CreateLogic">
+            <summary>
+            This class has methods that creates logics.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Program.CreateLogic.CreateBikeLogic(BikeShop.Repository.BikeRepository,BikeShop.Repository.BrandRepository,BikeShop.Repository.OwnerRepository,BikeShop.Repository.ServiceRepository,BikeShop.Repository.FacebookGroupRepository,BikeShop.Repository.OwnerFacebookGroupRepository)">
+            <summary>
+            This method returns a BikeLogic.
+            </summary>
+            <param name="bikeRepo">The BikeRepository.</param>
+            <param name="brandRepo">The BrandRepository.</param>
+            <param name="ownerRepo">The OwnerRepository.</param>
+            <param name="serviceRepo">The ServiceRepository.</param>
+            <param name="facebookGroupRepo">The FacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+            <returns>BikeLogic.</returns>
+        </member>
+        <member name="M:BikeShop.Program.CreateLogic.CreateBrandLogic(BikeShop.Repository.BikeRepository,BikeShop.Repository.BrandRepository,BikeShop.Repository.OwnerRepository,BikeShop.Repository.ServiceRepository,BikeShop.Repository.FacebookGroupRepository,BikeShop.Repository.OwnerFacebookGroupRepository)">
+            <summary>
+            This method returns a BrandLogic.
+            </summary>
+            <param name="bikeRepo">The BikeRepository.</param>
+            <param name="brandRepo">The BrandRepository.</param>
+            <param name="ownerRepo">The OwnerRepository.</param>
+            <param name="serviceRepo">The ServiceRepository.</param>
+            <param name="facebookGroupRepo">The FacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+            <returns>BrandLogic.</returns>
+        </member>
+        <member name="M:BikeShop.Program.CreateLogic.CreateOwnerLogic(BikeShop.Repository.BikeRepository,BikeShop.Repository.BrandRepository,BikeShop.Repository.OwnerRepository,BikeShop.Repository.ServiceRepository,BikeShop.Repository.FacebookGroupRepository,BikeShop.Repository.OwnerFacebookGroupRepository)">
+            <summary>
+            This method returns a OwnerLogic.
+            </summary>
+            <param name="bikeRepo">The BikeRepository.</param>
+            <param name="brandRepo">The BrandRepository.</param>
+            <param name="ownerRepo">The OwnerRepository.</param>
+            <param name="serviceRepo">The ServiceRepository.</param>
+            <param name="facebookGroupRepo">The FacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+            <returns>OwnerLogic.</returns>
+        </member>
+        <member name="M:BikeShop.Program.CreateLogic.CreateServiceLogic(BikeShop.Repository.BikeRepository,BikeShop.Repository.BrandRepository,BikeShop.Repository.OwnerRepository,BikeShop.Repository.ServiceRepository,BikeShop.Repository.FacebookGroupRepository,BikeShop.Repository.OwnerFacebookGroupRepository)">
+            <summary>
+            This method returns a OwnerLogic.
+            </summary>
+            <param name="bikeRepo">The BikeRepository.</param>
+            <param name="brandRepo">The BrandRepository.</param>
+            <param name="ownerRepo">The OwnerRepository.</param>
+            <param name="serviceRepo">The ServiceRepository.</param>
+            <param name="facebookGroupRepo">The FacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+            <returns>OwnerLogic.</returns>
+        </member>
+        <member name="M:BikeShop.Program.CreateLogic.CreateFacebookGroupLogic(BikeShop.Repository.BikeRepository,BikeShop.Repository.BrandRepository,BikeShop.Repository.OwnerRepository,BikeShop.Repository.ServiceRepository,BikeShop.Repository.FacebookGroupRepository,BikeShop.Repository.OwnerFacebookGroupRepository)">
+            <summary>
+            This method returns a OwnerLogic.
+            </summary>
+            <param name="bikeRepo">The BikeRepository.</param>
+            <param name="brandRepo">The BrandRepository.</param>
+            <param name="ownerRepo">The OwnerRepository.</param>
+            <param name="serviceRepo">The ServiceRepository.</param>
+            <param name="facebookGroupRepo">The FacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+            <returns>OwnerLogic.</returns>
+        </member>
+        <member name="M:BikeShop.Program.CreateLogic.CreateOwnerFacebookGroupLogic(BikeShop.Repository.BikeRepository,BikeShop.Repository.BrandRepository,BikeShop.Repository.OwnerRepository,BikeShop.Repository.ServiceRepository,BikeShop.Repository.FacebookGroupRepository,BikeShop.Repository.OwnerFacebookGroupRepository)">
+            <summary>
+            This method returns a OwnerLogic.
+            </summary>
+            <param name="bikeRepo">The BikeRepository.</param>
+            <param name="brandRepo">The BrandRepository.</param>
+            <param name="ownerRepo">The OwnerRepository.</param>
+            <param name="serviceRepo">The ServiceRepository.</param>
+            <param name="facebookGroupRepo">The FacebookGroupRepository.</param>
+            <param name="ofbgRepo">The OwnerFacebookGroupRepository.</param>
+            <returns>OwnerLogic.</returns>
+        </member>
+        <member name="T:BikeShop.Program.CreateRepo">
+            <summary>
+            This class creates repos.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Program.CreateRepo.CreateBikeRepo(BikeShop.Data.BikeDbContext)">
+            <summary>
+            This method return a BikeRepository.
+            </summary>
+            <param name="ctx">The Db Context.</param>
+            <returns>BikeRepository.</returns>
+        </member>
+        <member name="M:BikeShop.Program.CreateRepo.CreateBrandRepo(BikeShop.Data.BikeDbContext)">
+            <summary>
+            This method return a BrandRepository.
+            </summary>
+            <param name="ctx">The Db Context.</param>
+            <returns>BrandRepository.</returns>
+        </member>
+        <member name="M:BikeShop.Program.CreateRepo.CreateOwnerRepo(BikeShop.Data.BikeDbContext)">
+            <summary>
+            This method return a OwnerRepository.
+            </summary>
+            <param name="ctx">The Db Context.</param>
+            <returns>OwnerRepository.</returns>
+        </member>
+        <member name="M:BikeShop.Program.CreateRepo.CreateServiceRepo(BikeShop.Data.BikeDbContext)">
+            <summary>
+            This method return a ServiceRepository.
+            </summary>
+            <param name="ctx">The Db Context.</param>
+            <returns>ServiceRepository.</returns>
+        </member>
+        <member name="M:BikeShop.Program.CreateRepo.CreateOwnerFacebookGroupRepo(BikeShop.Data.BikeDbContext)">
+            <summary>
+            This method return a OwnerFacebookGroupRepository.
+            </summary>
+            <param name="ctx">The Db Context.</param>
+            <returns>OwnerFacebookGroupRepository.</returns>
+        </member>
+        <member name="M:BikeShop.Program.CreateRepo.CreateFacebookGroupRepo(BikeShop.Data.BikeDbContext)">
+            <summary>
+            This method return a FacebookGroupRepository.
+            </summary>
+            <param name="ctx">The Db Context.</param>
+            <returns>FacebookGroupRepository.</returns>
+        </member>
+        <member name="T:BikeShop.Programm">
+            <summary>
+            This is the main program.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Programm.Main">
+            <summary>
+            This is the main method.
+            </summary>
+        </member>
+    </members>
+</doc>

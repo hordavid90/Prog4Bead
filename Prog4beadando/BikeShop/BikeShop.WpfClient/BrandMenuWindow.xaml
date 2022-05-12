@@ -1,0 +1,55 @@
+﻿<Window x:Class="BikeShop.WpfClient.BrandMenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BikeShop.WpfClient"
+        mc:Ignorable="d"
+        Title="BrandMenuWindow">
+
+    <Window.DataContext>
+        <local:BrandMenuWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox ItemsSource="{Binding Brands}" HorizontalContentAlignment="Stretch" Grid.Column="0" SelectedItem="{Binding SelectedBrand}" VerticalAlignment="Center">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="Red" BorderBrush="Black" BorderThickness="2">
+                        <StackPanel>
+                            <Label Content="{Binding Id}" FontWeight="Bold" ContentStringFormat="Id: {0}" Foreground="White"/>
+                            <Label Content="{Binding Name}" FontWeight="Bold" ContentStringFormat="Name: {0}" Foreground="White"/>
+                            <Label Content="{Binding Country}" ContentStringFormat="Country: {0}" Foreground="White"/>
+                            <Label Content="{Binding Established}" ContentStringFormat="Established: {0}" Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="5">
+            <Label Content="ID" Background="LightBlue" Padding="10" Margin="2"/>
+            <TextBox Text="{Binding SelectedBrand.Id}" Padding="10" Margin="2"/>
+            <Label Content="Name" Background="LightBlue" Padding="10" Margin="2"/>
+            <TextBox Text="{Binding SelectedBrand.Name}" Padding="10" Margin="2"/>
+            <Label Content="Country:" Background="LightBlue" Padding="10" Margin="2"/>
+            <TextBox Text="{Binding SelectedBrand.Country}" Padding="10" Margin="2"/>
+            <Label Content="Established" Background="LightBlue" Padding="10" Margin="2"/>
+            <TextBox Text="{Binding SelectedBrand.Established}" Padding="10" Margin="2"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" VerticalAlignment="Center">
+            <Button Content="Add Brand"  Margin="10" Padding="10" Command="{Binding AddBrandCommand}" Background="LightGreen"/>
+            <Button Content="Delete Brand"  Margin="10" Padding="10" Command="{Binding DeleteBrandCommand}" Background="LightGreen"/>
+            <Button Content="Modify Brand"  Margin="10" Padding="10" Command="{Binding ModifyBrandCommand}" Background="LightGreen"/>
+            <Button Content="Back" Margin="10" Padding="10" Click="Button_Click" Background="LightGreen"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

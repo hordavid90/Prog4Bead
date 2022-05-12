@@ -1,0 +1,59 @@
+﻿<Window x:Class="BikeShop.WpfClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BikeShop.WpfClient"
+        mc:Ignorable="d"
+        Title="Bike Editor">
+
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox ItemsSource="{Binding Bikes}" HorizontalContentAlignment="Stretch" Grid.Column="0" SelectedItem="{Binding SelectedBike}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="Red" BorderBrush="Black" BorderThickness="2">
+                        <StackPanel>
+                            <Label Content="{Binding Id}" FontWeight="Bold" ContentStringFormat="Id: {0}" Foreground="White"/>
+                            <Label Content="{Binding Model}" FontWeight="Bold" ContentStringFormat="Modell: {0}" Foreground="White"/>
+                            <Label Content="{Binding BasePrice}" ContentStringFormat="Ár: {0}" Foreground="White"/>
+                            <Label Content="{Binding Brand.Name}" ContentStringFormat="Márka: {0}" Foreground="White"/>
+                            <Label Content="{Binding Owner.Name}" ContentStringFormat="Tulaj: {0}" Foreground="White"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="5">
+            <Label Content="ID" Background="LightBlue" Padding="10" Margin="2"/>
+            <TextBox Text="{Binding SelectedBike.Id}" Padding="10" Margin="2"/>
+            <Label Content="Model" Background="LightBlue" Padding="10" Margin="2"/>
+            <TextBox Text="{Binding SelectedBike.Model}" Padding="10" Margin="2"/>
+            <Label Content="Price" Background="LightBlue" Padding="10" Margin="2"/>
+            <TextBox Text="{Binding SelectedBike.BasePrice}" Padding="10" Margin="2"/>
+            <Label Content="Brand ID" Background="LightBlue" Padding="10" Margin="2"/>
+            <TextBox Text="{Binding SelectedBike.BrandId}" Padding="10" Margin="2"/>
+            <Label Content="Owner ID" Background="LightBlue" Padding="10" Margin="2"/>
+            <TextBox Text="{Binding SelectedBike.OwnerId}" Padding="10" Margin="2"/>
+
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" VerticalAlignment="Center">            
+            <Button Content="Add Bike" Command="{Binding AddBikeCommand}" Margin="10" Padding="10" Background="LightGreen"/>
+            <Button Content="Delete Bike" Command="{Binding DeleteBikeCommand}" Margin="10" Padding="10" Background="LightGreen"/>
+            <Button Content="Modify Bike" Command="{Binding ModifyBikeCommand}" Margin="10" Padding="10" Background="LightGreen"/>
+            <Button Content="Back" Margin="10" Padding="10" Click="Button_Click" Background="LightGreen"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

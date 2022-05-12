@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BikeShop.Data</name>
+    </assembly>
+    <members>
+        <member name="T:BikeShop.Data.Bike">
+            <summary>
+            This is the Bike class.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Bike.Id">
+            <summary>
+            Gets or sets the id of a bike.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Bike.Model">
+            <summary>
+            Gets or sets the model of a bike.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Bike.BasePrice">
+            <summary>
+            Gets or sets the price of a bike.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Bike.BrandId">
+            <summary>
+            Gets or sets the brand id of a bike. This is a foreign key.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Bike.Brand">
+            <summary>
+            Gets or sets the Brand of a bike.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Bike.OwnerId">
+            <summary>
+            Gets or sets the owner id of a bike.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Bike.Owner">
+            <summary>
+            Gets or sets the owner of a bike.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Data.Bike.ToString">
+            <summary>
+            This method overrides the basic ToString method.
+            </summary>
+            <returns>It returns the id and the bike's model name.</returns>
+        </member>
+        <member name="M:BikeShop.Data.Bike.Equals(System.Object)">
+            <summary>
+            This method decides if two bikes are the same or not.
+            </summary>
+            <param name="obj">It is a bike item.</param>
+            <returns>It returns if two obejct are equal or not.</returns>
+        </member>
+        <member name="M:BikeShop.Data.Bike.GetHashCode">
+            <summary>
+            This returns the bike's id as a HashCode.
+            </summary>
+            <returns>The id of the bike.</returns>
+        </member>
+        <member name="T:BikeShop.Data.BikeBrandConnection">
+            <summary>
+            This class contains the brand names and the average price of the bikes.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.BikeBrandConnection.BrandName">
+            <summary>
+            Gets or sets this brand names.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.BikeBrandConnection.AveragePrice">
+            <summary>
+            Gets or sets the average price of the bikes by brand.
+            </summary>
+        </member>
+        <member name="T:BikeShop.Data.BikeDbContext">
+            <summary>
+            This is the DbContext.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Data.BikeDbContext.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Data.BikeDbContext"/> class.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.BikeDbContext.Brand">
+            <summary>
+            Gets or sets Brands.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.BikeDbContext.Bike">
+            <summary>
+            Gets or sets Bikes.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.BikeDbContext.Owner">
+            <summary>
+            Gets or sets Owners.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.BikeDbContext.Service">
+            <summary>
+            Gets or sets Service stations.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.BikeDbContext.FacebookGroup">
+            <summary>
+            Gets or sets Facebook groups.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.BikeDbContext.OwnerFacebookGroup">
+            <summary>
+            Gets or sets the OwnerFacebookGroup.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Data.BikeDbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BikeShop.Data.BikeDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc/>
+        </member>
+        <member name="T:BikeShop.Data.Brand">
+            <summary>
+            This is the Brand class.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Data.Brand.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Data.Brand"/> class.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Brand.Id">
+            <summary>
+            Gets or sets id of a brand.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Brand.Name">
+            <summary>
+            Gets or sets name of a brand.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Brand.Bikes">
+            <summary>
+            Gets or sets the bikes of a brand.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Brand.Country">
+            <summary>
+            Gets or sets the country of a brand.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Brand.Established">
+            <summary>
+            Gets or sets the establishing date of a brand.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Data.Brand.ToString">
+            <summary>
+            This method overrides the basic ToString method.
+            </summary>
+            <returns>It returns the id and the brand's name.</returns>
+        </member>
+        <member name="M:BikeShop.Data.Brand.Equals(System.Object)">
+            <summary>
+            This method decides if two brands are the same or not.
+            </summary>
+            <param name="obj">It is a Brand item.</param>
+            <returns>It returns if two obejct are equal or not.</returns>
+        </member>
+        <member name="M:BikeShop.Data.Brand.GetHashCode">
+            <summary>
+            This returns the brand's id as a HashCode.
+            </summary>
+            <returns>The id of the brand.</returns>
+        </member>
+        <member name="T:BikeShop.Data.FacebookGroup">
+            <summary>
+            This is the FacebookGroup class and it will be the FacebookGroup table in the DB.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Data.FacebookGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Data.FacebookGroup"/> class.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.FacebookGroup.Owners">
+            <summary>
+            Gets or sets the owners in a FacebookGroup.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.FacebookGroup.Id">
+            <summary>
+            Gets or sets id of a FacebookGroup.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.FacebookGroup.Name">
+            <summary>
+            Gets or sets name of a FacebookGroup.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.FacebookGroup.IsBrandSpecifiad">
+            <summary>
+            Gets or sets a value indicating whether a FacebookGroup is brand specified or not.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.FacebookGroup.SpecifiedBrand">
+            <summary>
+            Gets or sets the specified brand of a FacebookGroup.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.FacebookGroup.MemberCount">
+            <summary>
+            Gets the number of members of a FacebookGroup.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.FacebookGroup.OwnerFBGroup">
+            <summary>
+            Gets or sets the Owner-FBgroup conection.
+            </summary>
+        </member>
+        <member name="T:BikeShop.Data.Owner">
+            <summary>
+            The owner table.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Data.Owner.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BikeShop.Data.Owner"/> class.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Owner.Id">
+            <summary>
+            Gets or sets id of an owner.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Owner.Name">
+            <summary>
+            Gets or sets the name of an owner.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Owner.Money">
+            <summary>
+            Gets or sets the money of an owner.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Owner.Bikes">
+            <summary>
+            Gets or sets the bikes of an owner.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Owner.OwnerFBGroup">
+            <summary>
+            Gets or sets the Owner-FBgroup.
+            </summary>
+        </member>
+        <member name="M:BikeShop.Data.Owner.ToString">
+            <summary>
+            This method overrides the basic ToString method.
+            </summary>
+            <returns>It returns the id and the owner's name.</returns>
+        </member>
+        <member name="M:BikeShop.Data.Owner.Equals(System.Object)">
+            <summary>
+            This method decides if two owner are the same or not.
+            </summary>
+            <param name="obj">It is an Owner item.</param>
+            <returns>It returns if two obejct are equal or not.</returns>
+        </member>
+        <member name="M:BikeShop.Data.Owner.GetHashCode">
+            <summary>
+            This returns the owner's id as a HashCode.
+            </summary>
+            <returns>The id of the owner.</returns>
+        </member>
+        <member name="T:BikeShop.Data.OwnerFBGroup">
+            <summary>
+            This is the connection table for the Owners and Facebook groups.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.OwnerFBGroup.ConId">
+            <summary>
+            Gets or sets the connection Id for the Owner-FBgroup conection.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.OwnerFBGroup.OwnerId">
+            <summary>
+            Gets or sets the Owner id in the connection.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.OwnerFBGroup.Owner">
+            <summary>
+            Gets or sets the owner in the connection.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.OwnerFBGroup.FBGroupId">
+            <summary>
+            Gets or sets the FB group Id for the Owner-FBgroup conection.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.OwnerFBGroup.FacebookGroup">
+            <summary>
+            Gets or sets the Facebook group for the Owner-FBgroup conection.
+            </summary>
+        </member>
+        <member name="T:BikeShop.Data.Service">
+            <summary>
+            The service table.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Service.Id">
+            <summary>
+            Gets or sets the ID of the service station.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Service.Name">
+            <summary>
+            Gets or sets the name of the service station.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Service.MaxSpace">
+            <summary>
+            Gets or sets the maximum space int the service station.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Service.EmployeeNumer">
+            <summary>
+            Gets or sets the number of employees in the service station.
+            </summary>
+        </member>
+        <member name="P:BikeShop.Data.Service.BikesInService">
+            <summary>
+            Gets or sets the bikes int the service station that is there for reparation.
+            </summary>
+        </member>
+    </members>
+</doc>

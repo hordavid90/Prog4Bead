@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Service UI</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h1>Service Catalog</h1>
+
+    <div id="formdiv">
+        <label>Service Name</label>
+        <input type="text" id="servicename" />
+        <label>Max Space</label>
+        <input type="number" id="servicemaxspace" />
+        <label>Employee Number</label>
+        <input type="number" id="serviceemlpoyeenumber" />
+        <button type="button" onclick="create()">Add Service</button>
+    </div>
+
+    <div id="updateformdiv">
+        <h2>Updating</h2>
+        <label>Service Name</label>
+        <input type="text" id="servicenameupdate" />
+        <label>Max Space</label>
+        <input type="number" id="servicemaxspaceupdate" />
+        <label>Employee Number</label>
+        <input type="number" id="serviceemlpoyeenumberupdate" />
+        <button type="button" onclick="update()">Update Service</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>MaxSpace</th>
+                <th>EmployeeNumber</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
